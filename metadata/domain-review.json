@@ -1,0 +1,73 @@
+{
+  "repo": "binary-move-tablebase-scope",
+  "language": "Elixir",
+  "category": "Chess and game engines",
+  "goal": "Build an Elixir toolkit that studies tablebase behavior through layout fixtures, with stable geometry snapshots and local-only command execution.",
+  "review_model": {
+    "terms": [
+      "position pressure",
+      "move ordering",
+      "search width",
+      "endgame risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "position pressure",
+      "signal": 61,
+      "slack": 33,
+      "drag": 23,
+      "confidence": 79,
+      "score": 165,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "move ordering",
+      "signal": 71,
+      "slack": 47,
+      "drag": 26,
+      "confidence": 78,
+      "score": 189,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "search width",
+      "signal": 64,
+      "slack": 47,
+      "drag": 28,
+      "confidence": 90,
+      "score": 181,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "endgame risk",
+      "signal": 82,
+      "slack": 37,
+      "drag": 25,
+      "confidence": 81,
+      "score": 207,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "position pressure",
+      "signal": 86,
+      "slack": 51,
+      "drag": 28,
+      "confidence": 79,
+      "score": 218,
+      "lane": "ship"
+    }
+  ]
+}
