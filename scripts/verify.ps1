@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 mix test
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-binary-move-tablebase-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-binary-move-tablebase-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-binary-move-tablebase-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

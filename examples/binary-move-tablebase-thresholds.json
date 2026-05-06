@@ -1,0 +1,17 @@
+{
+  "repo": "binary-move-tablebase-scope",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 166,
+    "watch": 99
+  },
+  "terms": [
+    "position pressure",
+    "move ordering",
+    "search width",
+    "endgame risk"
+  ]
+}
